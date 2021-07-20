@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97A9AE2226A709B900802F79 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A9AE2126A709B900802F79 /* TabView.swift */; };
+		97A9AE2426A70ACC00802F79 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A9AE2326A70ACC00802F79 /* HeaderView.swift */; };
+		97A9AE2726A7123400802F79 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A9AE2626A7123400802F79 /* ColorExtension.swift */; };
+		97A9AE2926A712B000802F79 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A9AE2826A712B000802F79 /* RoundedCorners.swift */; };
 		97C8B85126A6DE9200D116C1 /* Covid19App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8B85026A6DE9200D116C1 /* Covid19App.swift */; };
-		97C8B85326A6DE9200D116C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8B85226A6DE9200D116C1 /* ContentView.swift */; };
+		97C8B85326A6DE9200D116C1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8B85226A6DE9200D116C1 /* HomeView.swift */; };
 		97C8B85526A6DE9300D116C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C8B85426A6DE9300D116C1 /* Assets.xcassets */; };
 		97C8B85826A6DE9300D116C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C8B85726A6DE9300D116C1 /* Preview Assets.xcassets */; };
 		97C8B86326A6DE9300D116C1 /* Covid19Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8B86226A6DE9300D116C1 /* Covid19Tests.swift */; };
@@ -33,9 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		97A9AE2126A709B900802F79 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		97A9AE2326A70ACC00802F79 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		97A9AE2626A7123400802F79 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		97A9AE2826A712B000802F79 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		97C8B84D26A6DE9200D116C1 /* Covid19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covid19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C8B85026A6DE9200D116C1 /* Covid19App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19App.swift; sourceTree = "<group>"; };
-		97C8B85226A6DE9200D116C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		97C8B85226A6DE9200D116C1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		97C8B85426A6DE9300D116C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C8B85726A6DE9300D116C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		97C8B85926A6DE9300D116C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		97A9AE2526A7121C00802F79 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				97A9AE2626A7123400802F79 /* ColorExtension.swift */,
+				97A9AE2826A712B000802F79 /* RoundedCorners.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		97C8B84426A6DE9200D116C1 = {
 			isa = PBXGroup;
 			children = (
@@ -95,11 +112,11 @@
 		97C8B84F26A6DE9200D116C1 /* Covid19 */ = {
 			isa = PBXGroup;
 			children = (
-				97C8B85026A6DE9200D116C1 /* Covid19App.swift */,
-				97C8B85226A6DE9200D116C1 /* ContentView.swift */,
+				97C8B87B26A6DEA200D116C1 /* App */,
+				97C8B87C26A6DEB500D116C1 /* Features */,
 				97C8B85426A6DE9300D116C1 /* Assets.xcassets */,
-				97C8B85926A6DE9300D116C1 /* Info.plist */,
 				97C8B85626A6DE9300D116C1 /* Preview Content */,
+				97A9AE2526A7121C00802F79 /* Utils */,
 			);
 			path = Covid19;
 			sourceTree = "<group>";
@@ -128,6 +145,33 @@
 				97C8B86F26A6DE9300D116C1 /* Info.plist */,
 			);
 			path = Covid19UITests;
+			sourceTree = "<group>";
+		};
+		97C8B87B26A6DEA200D116C1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				97C8B85926A6DE9300D116C1 /* Info.plist */,
+				97C8B85026A6DE9200D116C1 /* Covid19App.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		97C8B87C26A6DEB500D116C1 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				97C8B87D26A6DEC400D116C1 /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		97C8B87D26A6DEC400D116C1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				97C8B85226A6DE9200D116C1 /* HomeView.swift */,
+				97A9AE2126A709B900802F79 /* TabView.swift */,
+				97A9AE2326A70ACC00802F79 /* HeaderView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97C8B85326A6DE9200D116C1 /* ContentView.swift in Sources */,
+				97C8B85326A6DE9200D116C1 /* HomeView.swift in Sources */,
+				97A9AE2226A709B900802F79 /* TabView.swift in Sources */,
 				97C8B85126A6DE9200D116C1 /* Covid19App.swift in Sources */,
+				97A9AE2426A70ACC00802F79 /* HeaderView.swift in Sources */,
+				97A9AE2926A712B000802F79 /* RoundedCorners.swift in Sources */,
+				97A9AE2726A7123400802F79 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +469,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Covid19/Preview Content\"";
 				DEVELOPMENT_TEAM = MCRHF646YX;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Covid19/Info.plist;
+				INFOPLIST_FILE = Covid19/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -443,7 +491,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Covid19/Preview Content\"";
 				DEVELOPMENT_TEAM = MCRHF646YX;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Covid19/Info.plist;
+				INFOPLIST_FILE = Covid19/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
