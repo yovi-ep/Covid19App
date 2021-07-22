@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabView: View {
+struct TabBarView: View {
     private let tabImages = ["house.fill", "chart.bar.xaxis", "newspaper", "info.circle.fill"]
     @Namespace private var currentTab
     @Binding var tabSelected: Int
@@ -20,6 +20,8 @@ struct TabView: View {
                         Capsule()
                             .foregroundColor(Color(hex: "4C79FF"))
                             .matchedGeometryEffect(id: "currentTab", in: currentTab)
+                            .animation(.easeIn(duration: 0.2))
+                            
                     }
                     
                     Image(systemName: tabImages[idx])
@@ -42,7 +44,7 @@ struct TabView: View {
 
 struct TabView_Previews: PreviewProvider {
     static var previews: some View {
-        TabView(tabSelected: Binding.constant(0))
+        TabBarView(tabSelected: Binding.constant(0))
             .previewLayout(.sizeThatFits)
     }
 }

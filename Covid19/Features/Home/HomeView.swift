@@ -26,12 +26,12 @@ struct HomeView: View {
             ZStack(alignment: .bottom) {
                 ScrollView {
                     HeaderView(safeAreaTop: geometry.safeAreaInsets.top)
-                    
+
                     VStack(alignment: .leading, spacing: 16) {
                         Text("Prevention")
                             .font(.title3)
                             .fontWeight(.medium)
-                        
+
                         HStack(alignment: .top, spacing: 8) {
                             ForEach(0..<preventionImage.count) { idx in
                                 Button(action: {}, label: {
@@ -40,7 +40,7 @@ struct HomeView: View {
                                             .resizable()
                                             .frame(width: 90, height: 90)
                                             .aspectRatio(contentMode: .fill)
-                                        
+
                                         Text(preventionTitle[idx])
                                             .font(.subheadline)
                                             .fontWeight(.medium)
@@ -54,7 +54,7 @@ struct HomeView: View {
                     }.padding()
                 }.edgesIgnoringSafeArea(.top)
                 
-                TabView(tabSelected: $tabSelected)
+                TabBarView(tabSelected: $tabSelected)
                     .padding(.vertical, 8)
                     .padding(.horizontal, 16)
             }
