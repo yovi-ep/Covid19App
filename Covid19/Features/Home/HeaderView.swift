@@ -8,14 +8,9 @@
 import SwiftUI
 
 struct HeaderView: View {
-    var safeAreaTop: CGFloat? = 0
     
     var body: some View {
         VStack(alignment: .leading) {
-            ToolbarView()
-                .padding()
-                .padding(.top, safeAreaTop)
-            
             HStack(spacing: 8) {
                 Text("Covid-19")
                     .font(.title)
@@ -47,7 +42,9 @@ struct HeaderView: View {
                 })
                 .background(Color.white)
                 .clipShape(Capsule())
-            }.padding(.horizontal, 16)
+            }
+            .padding(.horizontal, 16)
+            .padding(.top, 8)
             
             Text("Are you feeling sick?")
                 .foregroundColor(.white)
@@ -114,26 +111,6 @@ struct HeaderView: View {
 
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderView(safeAreaTop: 20)
-    }
-}
-
-struct ToolbarView: View {
-    var body: some View {
-        HStack {
-            Button(action: {}, label: {
-                Image(systemName: "line.horizontal.3")
-                    .foregroundColor(Color.white)
-                    .frame(width: 24, height: 24)
-            })
-            
-            Spacer()
-            
-            Button(action: {}, label: {
-                Image(systemName: "bell")
-                    .foregroundColor(Color.white)
-                    .frame(width: 24, height: 24)
-            })
-        }
+        HeaderView()
     }
 }

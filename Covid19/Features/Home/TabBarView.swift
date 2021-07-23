@@ -13,7 +13,7 @@ struct TabBarView: View {
     @Binding var tabSelected: Int
     
     var body: some View {
-        HStack(alignment: .center, spacing: 4) {
+        HStack(alignment: .top, spacing: 4) {
             ForEach(tabImages.indices) { idx in
                 ZStack(alignment: .center) {
                     if idx == tabSelected {

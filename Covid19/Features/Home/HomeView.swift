@@ -9,24 +9,24 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State private var tabSelected: Int = 0
-    
-    
     var body: some View {
         GeometryReader { geometry in
-            ZStack(alignment: .bottom) {
+            VStack(spacing: 0) {
+                ToolbarView()
+                    .padding(.top, geometry.safeAreaInsets.top)
+                    .background(Color(hex: "473F97"))
+                
                 ScrollView(.vertical) {
-                    HeaderView(safeAreaTop: geometry.safeAreaInsets.top)
+                    HeaderView()
                     PreventionView().padding()
                     NewsView().padding()
-                }.edgesIgnoringSafeArea(.top)
-                
-                TabBarView(tabSelected: $tabSelected)
-                    .padding(.vertical, 8)
-                    .padding(.horizontal, 16)
-            }
+                    NewsView().padding()
+                    NewsView().padding()
+                }
+            }.ignoresSafeArea(.all, edges: .top)
         }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
